@@ -1,3 +1,5 @@
+
+#### Generation access token 
 POST http://localhost:8080/realms/new-realm/protocol/openid-connect/token
 Content-Type: application/x-www-form-urlencoded
 
@@ -5,3 +7,13 @@ username=user@user.com
 &password=secret
 &grant_type=password
 &client_id=new-client
+
+#### Generation access token and id token 
+POST http://localhost:8080/realms/new-realm/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+username=user@user.com
+&password=secret
+&grant_type=password
+&client_id=new-client
+&scope=openid
